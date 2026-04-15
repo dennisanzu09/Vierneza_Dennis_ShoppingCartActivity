@@ -46,7 +46,10 @@ I asked questions about how to implement certain features and then modified the 
 
 Some parts were adjusted to make the logic clearer and easier to follow.
 
+
+
 prompts used:
+
 "How to validate user input in C# using TryParse"
 
 "How to prevent duplicate items in an array-based cart system"
@@ -54,6 +57,9 @@ prompts used:
 "How to compute totals and apply discounts in C#"
 
 
+
+
 AUTHOR
+
 
 Dennis Vierneza
