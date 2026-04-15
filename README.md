@@ -7,12 +7,19 @@ This project is a console-based Shopping Cart System developed in C#. It simulat
 Features
 
 • Display product menu
+
 • User selects product and quantity
+
 • Input validation using int.TryParse()
+
 • Stock checking (prevents overbuying)
+
 • Add items to cart
+
 • Prevent duplicate items (updates quantity instead)
+
 • Computes total and applies 10% discount if total ≥ ₱5000
+
 • Displays receipt and updated stock
 
 
