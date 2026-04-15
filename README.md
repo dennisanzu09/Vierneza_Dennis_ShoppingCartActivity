@@ -1,11 +1,11 @@
-Shopping Cart System (C#)
+SHOPPING CART SYSTEM (C#)
 
 This is a simple console-based shopping cart system made in C#.
 It uses classes, arrays, and basic input validation to simulate a small store.
 
 
 
-Features
+FEATURES
 
 - Display product menu
 - User selects product and quantity
@@ -18,7 +18,7 @@ Features
 
 
 
-How to Run
+HOW TO EUN
 
 1. Open in Visual Studio or any C# IDE
 2. Run the program
@@ -26,14 +26,14 @@ How to Run
 
 
 
-Flowchart
+FLOWCHART
 
 A flowchart of the program is included in this repository.
 It shows the step-by-step process of the system from menu display to checkout.
 
 
 
-AI Usage in This Project
+AI USAGE IN THIS PROJECT
 
 I used AI to help me understand some parts of the program, especially:
 
@@ -47,6 +47,6 @@ Some parts were adjusted to make the logic clearer and easier to follow.
 
 
 
-Author
+AUTHOR
 
 Dennis Vierneza
