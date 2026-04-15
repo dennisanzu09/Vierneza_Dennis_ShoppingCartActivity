@@ -17,6 +17,11 @@ class Product
         return qty > 0 && qty <= Stock;
     }
 
+    public double CalculateTotal(int qty)
+    {
+        return Price * qty;
+    }
+
     public void ReduceStock(int qty)
     {
         Stock -= qty;
@@ -33,6 +38,10 @@ class Program
             new Product { Id = 2, Name = "Monitor", Price = 8500, Stock = 8 },
             new Product { Id = 3, Name = "Mouse", Price = 500, Stock = 50 }
         };
+
+        Product[] cart = new Product[10];
+        int[] qtyList = new int[10];
+        int count = 0;
 
         while (true)
         {
@@ -72,15 +81,71 @@ class Program
                 continue;
             }
 
+            bool exists = false;
+
+            for (int i = 0; i < count; i++)
+            {
+                if (cart[i].Id == selected.Id)
+                {
+                    qtyList[i] += qty;
+                    exists = true;
+                    break;
+                }
+            }
+
+            if (!exists)
+            {
+                if (count >= cart.Length)
+                {
+                    Console.WriteLine("Cart is already full.");
+                    continue;
+                }
+
+                cart[count] = selected;
+                qtyList[count] = qty;
+                count++;
+            }
+
             selected.ReduceStock(qty);
 
-            Console.WriteLine("Purchase completed!");
+            Console.WriteLine("Item added to your cart.");
 
             Console.Write("Continue? (Y/N): ");
             char ans = char.ToUpper(Console.ReadKey().KeyChar);
             Console.WriteLine();
 
             if (ans == 'N') break;
+        }
+
+        Console.WriteLine("\n=== RECEIPT ===");
+
+        double total = 0;
+
+        for (int i = 0; i < count; i++)
+        {
+            double subtotal = cart[i].CalculateTotal(qtyList[i]);
+            total += subtotal;
+
+            Console.WriteLine($"{cart[i].Name} x{qtyList[i]} = ₱{subtotal}");
+        }
+
+        Console.WriteLine($"Total Amount: ₱{total}");
+
+        double discount = 0;
+
+        if (total >= 5000)
+        {
+            discount = total * 0.10;
+            Console.WriteLine($"Discount Applied: ₱{discount}");
+        }
+
+        Console.WriteLine($"Final Amount: ₱{total - discount}");
+
+        Console.WriteLine("\n=== UPDATED STOCK ===");
+
+        foreach (var item in products)
+        {
+            Console.WriteLine($"{item.Name}: {item.Stock}");
         }
     }
 }
