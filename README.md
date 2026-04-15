@@ -22,4 +22,12 @@ Features
 
 • Displays receipt and updated stock
 
+How to Run
+
+1. Open the project in a C# IDE (e.g., Visual Studio)
+2. Run the "Program.cs" file
+3. Follow the console prompts to:
+   - Select a product
+   - Enter quantity
+   - Continue shopping or checkout
 
