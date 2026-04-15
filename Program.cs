@@ -81,6 +81,7 @@ class Program
                 continue;
             }
 
+            // Check if item already exists in cart
             bool exists = false;
 
             for (int i = 0; i < count; i++)
@@ -93,6 +94,7 @@ class Program
                 }
             }
 
+            // Add new item if not duplicate
             if (!exists)
             {
                 if (count >= cart.Length)
@@ -136,10 +138,12 @@ class Program
         if (total >= 5000)
         {
             discount = total * 0.10;
-            Console.WriteLine($"Discount Applied: ₱{discount}");
+            Console.WriteLine($"Discount Applied (10%): ₱{discount}");
         }
 
-        Console.WriteLine($"Final Amount: ₱{total - discount}");
+        double finalTotal = total - discount;
+
+        Console.WriteLine($"Final Amount: ₱{finalTotal}");
 
         Console.WriteLine("\n=== UPDATED STOCK ===");
 
