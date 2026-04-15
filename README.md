@@ -40,11 +40,16 @@ I used AI to help me understand some parts of the program, especially:
 - Input validation using "int.TryParse()"
 - Structuring the shopping cart logic
 - Handling duplicate items in the cart
+- Total and discounts
 
 I asked questions about how to implement certain features and then modified the code based on my understanding.
 
 Some parts were adjusted to make the logic clearer and easier to follow.
 
+prompts used:
+"How to validate user input in C# using TryParse"
+"How to prevent duplicate items in an array-based cart system"
+"How to compute totals and apply discounts in C#"
 
 
 AUTHOR
