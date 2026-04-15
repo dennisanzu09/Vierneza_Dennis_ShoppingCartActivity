@@ -49,4 +49,4 @@ Some parts were adjusted to make the logic clearer and easier to follow.
 
 Author
 
-Sebastian V. Olivenza
+Dennis Vierneza
