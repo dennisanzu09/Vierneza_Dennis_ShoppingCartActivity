@@ -18,7 +18,7 @@ FEATURES
 
 
 
-HOW TO EUN
+HOW TO RUN
 
 1. Open in Visual Studio or any C# IDE
 2. Run the program
@@ -48,7 +48,9 @@ Some parts were adjusted to make the logic clearer and easier to follow.
 
 prompts used:
 "How to validate user input in C# using TryParse"
+
 "How to prevent duplicate items in an array-based cart system"
+
 "How to compute totals and apply discounts in C#"
 
 
