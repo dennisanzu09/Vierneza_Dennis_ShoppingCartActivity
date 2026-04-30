@@ -73,6 +73,8 @@ Follow the instructions shown in the console to select items, manage your cart, 
 
 ---
 
+SCREENSHOT 
+
 <img width="1318" height="1022" alt="image" src="https://github.com/user-attachments/assets/a3fb60a8-52f5-45e0-94f4-9e20f16ee801" />
 
 ---
