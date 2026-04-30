@@ -41,6 +41,12 @@ I used AI to help me understand some parts of the program, especially:
 - Structuring the shopping cart logic
 - Handling duplicate items in the cart
 - Total and discounts
+- Figuring out how to organize the program flow using loops and conditions
+- Understanding how to compute totals, subtotals, and apply discount conditions
+- Improving how the receipt is displayed in a clear and readable format
+- Handling edge cases such as empty cart or invalid repeated inputs
+
+
 
 I asked questions about how to implement certain features and then modified the code based on my understanding.
 
@@ -56,7 +62,13 @@ prompts used:
 
 "How to compute totals and apply discounts in C#"
 
+"How to use loops in C# to repeatedly ask user input until a condition is met?"
 
+"How to calculate subtotal and total from multiple items in C#?"
+
+"How to format output in C# for displaying a receipt?"
+
+"What are common edge cases to handle in a simple shopping cart program?"
 
 
 AUTHOR
