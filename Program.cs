@@ -15,6 +15,8 @@ class Product
 
 class Program
 {
+    static int receiptNo = 1;
+
     static void Main()
     {
         Product[] products =
@@ -28,52 +30,53 @@ class Program
         int[] qty = new int[10];
         int cartCount = 0;
 
+        string[] history = new string[20];
+        int historyCount = 0;
+
         while (true)
         {
-            Console.WriteLine("1 Add  2 View  3 Remove  4 Clear  5 Exit");
-            int op = int.Parse(Console.ReadLine());
+            Console.WriteLine("\n=== STORE MENU ===");
+            for (int i = 0; i < products.Length; i++)
+                Console.WriteLine($"{products[i].Id}. {products[i].Name} - ₱{products[i].Price} (Stock: {products[i].Stock})");
 
-            if (op == 1)
+            Console.Write("Enter product #: ");
+            int c = int.Parse(Console.ReadLine());
+
+            Console.Write("Qty: ");
+            int q = int.Parse(Console.ReadLine());
+
+            if (products[c - 1].Stock < q) continue;
+
+            cart[cartCount] = products[c - 1];
+            qty[cartCount++] = q;
+            products[c - 1].Stock -= q;
+
+            Console.WriteLine("Checkout now? Y/N");
+            if (Console.ReadLine().ToUpper() == "Y")
             {
-                Console.Write("Product #: ");
-                int c = int.Parse(Console.ReadLine());
+                double total = 0;
 
-                Console.Write("Qty: ");
-                int q = int.Parse(Console.ReadLine());
-
-                if (products[c - 1].Stock >= q)
-                {
-                    cart[cartCount] = products[c - 1];
-                    qty[cartCount++] = q;
-                    products[c - 1].Stock -= q;
-                }
-            }
-            else if (op == 2)
-            {
                 for (int i = 0; i < cartCount; i++)
-                    Console.WriteLine($"{i + 1}. {cart[i].Name} x{qty[i]}");
-            }
-            else if (op == 3)
-            {
-                Console.Write("Remove #: ");
-                int i = int.Parse(Console.ReadLine()) - 1;
-                cart[i].Stock += qty[i];
+                    total += cart[i].GetTotal(qty[i]);
 
-                for (; i < cartCount - 1; i++)
-                {
-                    cart[i] = cart[i + 1];
-                    qty[i] = qty[i + 1];
-                }
-                cartCount--;
-            }
-            else if (op == 4)
-            {
-                for (int i = 0; i < cartCount; i++)
-                    cart[i].Stock += qty[i];
+                double discount = total >= 5000 ? total * 0.1 : 0;
+                double final = total - discount;
 
+                Console.WriteLine($"Total: {final}");
+
+                double pay = double.Parse(Console.ReadLine());
+                Console.WriteLine($"Change: {pay - final}");
+
+                history[historyCount++] = $"Receipt {receiptNo++} - ₱{final}";
                 cartCount = 0;
             }
-            else break;
+
+            Console.Write("Continue? N to exit: ");
+            if (Console.ReadLine().ToUpper() == "N") break;
         }
+
+        Console.WriteLine("\nHistory:");
+        for (int i = 0; i < historyCount; i++)
+            Console.WriteLine(history[i]);
     }
 }
