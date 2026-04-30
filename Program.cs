@@ -24,10 +24,30 @@ class Program
             new Product { Id = 3, Name = "Mouse", Price = 500, Stock = 50 }
         };
 
-        Console.WriteLine("=== STORE MENU ===");
-        foreach (var p in products)
+        Product[] cart = new Product[10];
+        int[] qty = new int[10];
+        int cartCount = 0;
+
+        Console.Write("Enter product number: ");
+        int choice = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter quantity: ");
+        int quantity = int.Parse(Console.ReadLine());
+
+        Product selected = products[choice - 1];
+
+        if (selected.Stock >= quantity)
         {
-            Console.WriteLine($"{p.Id}. {p.Name} - ₱{p.Price} (Stock: {p.Stock})");
+            cart[cartCount] = selected;
+            qty[cartCount] = quantity;
+            cartCount++;
+            selected.Stock -= quantity;
+
+            Console.WriteLine("Added to cart!");
+        }
+        else
+        {
+            Console.WriteLine("Not enough stock.");
         }
     }
 }
