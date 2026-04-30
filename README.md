@@ -1,60 +1,112 @@
-SHOPPING CART SYSTEM (C#)
+🛒 SHOPPING CART SYSTEM (C#)
 
-This is a simple console-based shopping cart system made in C#.
-It uses classes, arrays, and basic input validation to simulate a small store.
+This program is a console-based shopping cart system developed in C#. It simulates a small store where users can choose products, manage their cart, and complete a purchase with proper validation and tracking.
+
+The system applies object-oriented concepts such as classes and objects, and uses arrays to store products, cart items, and transaction history.
 
 
+---
 
 FEATURES
 
-- Display product menu
-- User selects product and quantity
-- Input validation using "int.TryParse()"
-- Stock checking (prevents overbuying)
-- Add items to cart
-- Prevent duplicate items (updates quantity instead)
-- Computes total and applies 10% discount if total ≥ ₱5000
-- Displays receipt and updated stock
+Displays product menu with price and stock
+User selects product and quantity
+Input validation using int.TryParse() and double.TryParse()
+Prevents purchasing items beyond available stock
+Adds items to cart and updates quantity if item already exists
+
+Cart management system:
+
+View cart items
+
+Update item quantity
+
+Remove specific item
+
+Clear entire cart
 
 
+Checkout system:
+
+Calculates total amount
+
+Applies 10% discount if total ≥ ₱5000
+
+Validates payment input
+
+Ensures payment is sufficient before proceeding
+
+Calculates and displays change
+
+
+Receipt system:
+
+Generates receipt number
+
+Displays date and time of purchase
+
+Shows items purchased with subtotal
+
+Displays total, discount, final amount, payment, and change
+
+
+Stock monitoring:
+
+Displays low stock alert for items with 5 or fewer remaining
+
+
+Order history:
+
+Stores completed transactions
+
+Displays list of previous receipts and totals
+
+
+
+---
 
 HOW TO RUN
 
-1. Open in Visual Studio or any C# IDE
-2. Run the program
-3. Follow the instructions in the console
+Open the program in Visual Studio or any C# IDE
+Run the program
+Follow the instructions shown in the console to select items, manage your cart, and checkout
 
+---
 
+SCREENSHOT 
 
-FLOWCHART
+<img width="1318" height="1022" alt="image" src="https://github.com/user-attachments/assets/a3fb60a8-52f5-45e0-94f4-9e20f16ee801" />
 
-A flowchart of the program is included in this repository.
-It shows the step-by-step process of the system from menu display to checkout.
-
-
+---
 
 AI USAGE IN THIS PROJECT
 
-I used AI to help me understand some parts of the program, especially:
+AI was used as a guide to better understand how to implement specific parts of the system. The explanations helped in building the logic step-by-step rather than copying full solutions.
 
-- Input validation using "int.TryParse()"
-- Structuring the shopping cart logic
-- Handling duplicate items in the cart
-- Total and discounts
-- Figuring out how to organize the program flow using loops and conditions
-- Understanding how to compute totals, subtotals, and apply discount conditions
-- Improving how the receipt is displayed in a clear and readable format
-- Handling edge cases such as empty cart or invalid repeated inputs
+AI assisted in:
+
+Understanding how to validate user input using TryParse()
+Designing the logic for updating item quantities in the cart instead of duplicating entries
+Structuring loops and menus for continuous user interaction
+Implementing total, subtotal, and discount calculations
+Creating a clear and organized receipt output
+Handling different edge cases such as:
+
+Invalid input values
+
+Insufficient stock
+
+Empty cart scenarios
+
+Invalid payment input
 
 
-
-I asked questions about how to implement certain features and then modified the code based on my understanding.
-
-Some parts were adjusted to make the logic clearer and easier to follow.
+The final code was adjusted and rewritten based on personal understanding to ensure clarity and correctness.
 
 
+---
 
-prompts used:
+PROMPTS USED
 
 "How to validate user input in C# using TryParse"
 
@@ -62,16 +114,35 @@ prompts used:
 
 "How to compute totals and apply discounts in C#"
 
-"How to use loops in C# to repeatedly ask user input until a condition is met?"
+"How to use loops in C# to repeatedly ask user input until exit?"
 
-"How to calculate subtotal and total from multiple items in C#?"
+"How to calculate subtotal and total in C# shopping cart?"
 
-"How to format output in C# for displaying a receipt?"
+"How to format receipt output in a console application?"
 
-"What are common edge cases to handle in a simple shopping cart program?"
+"What edge cases should be handled in a shopping cart system?"
 
+
+---
+
+SUMMARY OF CHANGES
+
+The program was improved from a basic shopping cart into a more complete and interactive system. The following changes were implemented:
+
+Added a cart management menu that allows users to view, update, remove, and clear items before checkout
+
+Implemented payment validation, ensuring that input is numeric and sufficient before completing the transaction
+
+Added a receipt system that includes receipt number, date and time, purchased items, totals, discount, payment, and change
+
+Introduced low stock alerts to notify users when product stock reaches 5 or below after checkout
+
+Implemented an order history feature to store and display completed transactions
+
+Improved input validation across the program, including strict handling of numeric inputs and Y/N prompts
+
+---
 
 AUTHOR
-
 
 Dennis Vierneza
