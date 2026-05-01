@@ -1,4 +1,4 @@
-🛒 SHOPPING CART SYSTEM (C#)
+ENHANCED SHOPPING CART SYSTEM (C#)
 
 This program is a console-based shopping cart system developed in C#. It simulates a small store where users can choose products, manage their cart, and complete a purchase with proper validation and tracking.
 
@@ -7,59 +7,70 @@ The system applies object-oriented concepts such as classes and objects, and use
 
 ---
 
+
 FEATURES
 
-Displays product menu with price and stock
-User selects product and quantity
-Input validation using int.TryParse() and double.TryParse()
-Prevents purchasing items beyond available stock
-Adds items to cart and updates quantity if item already exists
+• Displays product menu with price and stock
+• User selects product and quantity
+• Input validation using int.TryParse() and double.TryParse()
+• Prevents purchasing items beyond available stock
+• Adds items to cart and updates quantity if item already exists
+
+
 
 Cart management system:
 
-View cart items
+• View cart items
 
-Update item quantity
+• Update item quantity
 
-Remove specific item
+• Remove specific item
 
-Clear entire cart
+• Clear entire cart
+
+
 
 
 Checkout system:
 
-Calculates total amount
+• Calculates total amount
 
-Applies 10% discount if total ≥ ₱5000
+• Applies 10% discount if total ≥ ₱5000
 
-Validates payment input
+• Validates payment input
 
-Ensures payment is sufficient before proceeding
+• Ensures payment is sufficient before proceeding
 
-Calculates and displays change
+• Calculates and displays change
+
+
 
 
 Receipt system:
 
-Generates receipt number
+• Generates receipt number
 
-Displays date and time of purchase
+• Displays date and time of purchase
 
-Shows items purchased with subtotal
+• Shows items purchased with subtotal
 
-Displays total, discount, final amount, payment, and change
+• Displays total, discount, final amount, payment, and change
+
+
 
 
 Stock monitoring:
 
-Displays low stock alert for items with 5 or fewer remaining
+• Displays low stock alert for items with 5 or fewer remaining
+
+
 
 
 Order history:
 
-Stores completed transactions
+• Stores completed transactions
 
-Displays list of previous receipts and totals
+• Displays list of previous receipts and totals
 
 
 
